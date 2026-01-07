@@ -1,0 +1,230 @@
+/* =========================================
+   1. VARIABLES & RESET
+   ========================================= */
+:root {
+    --color-primary: #5865f2;
+    --color-primary-hover: #4752c4;
+    --color-bg-body: #36393f;
+    --color-bg-surface: #2f3136;
+    --color-bg-input: #202225;
+    --color-text-main: #dcddde;
+    --color-text-header: #ffffff;
+    --color-border: #202225;
+
+    --brand-success: #57f287;
+    --brand-danger: #ed4245;
+    --brand-warn: #fee75c;
+
+    --spacing-md: 1.5rem;
+    --radius-md: 8px;
+    --container-width: 800px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "gg sans", "Segoe UI", sans-serif;
+    background-color: var(--color-bg-body);
+    color: var(--color-text-main);
+    line-height: 1.6;
+}
+
+/* =========================================
+   2. LAYOUT & COMPONENTS
+   ========================================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(32, 34, 37, 0.95);
+    border-bottom: 1px solid var(--color-border);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar__brand {
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--color-text-header);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.navbar__brand i {
+    color: var(--color-primary);
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+/* Panel Styles */
+.panel {
+    background: var(--color-bg-surface);
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.panel__header {
+    background: var(--color-border);
+    padding: 10px 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.panel__body {
+    padding: 20px;
+}
+
+/* Inputs & Forms */
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-text-main);
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    background: var(--color-bg-input);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: white;
+    font-family: monospace;
+    transition: 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+/* Buttons */
+.grid-actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    color: white;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+.btn--primary {
+    background: var(--color-primary);
+}
+
+.btn--danger {
+    background: var(--brand-danger);
+}
+
+.btn--success {
+    background: var(--brand-success);
+    color: #000;
+}
+
+/* Console Output */
+.console {
+    background: #101113;
+    height: 300px;
+    padding: 15px;
+    font-family: "Consolas", monospace;
+    font-size: 0.9rem;
+    overflow-y: auto;
+    color: #a0a0a0;
+}
+
+.console__line {
+    margin-bottom: 5px;
+    border-left: 3px solid transparent;
+    padding-left: 8px;
+}
+
+.console__line.success {
+    border-color: var(--brand-success);
+    color: var(--brand-success);
+}
+
+.console__line.error {
+    border-color: var(--brand-danger);
+    color: var(--brand-danger);
+}
+
+.console__line.info {
+    border-color: var(--color-primary);
+    color: #fff;
+}
+
+/* Utils */
+.mt-md {
+    margin-top: var(--spacing-md);
+}
+
+.status-dot {
+    height: 8px;
+    width: 8px;
+    background: var(--brand-success);
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 10px var(--brand-success);
+}
+
+.status-indicator {
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Animations */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
