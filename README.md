@@ -1,5 +1,7 @@
 # discord webhook logger
 
+![banner](https://media.discordapp.net/attachments/1453363448896426078/1458435126949318709/New_Project_1.png?ex=695fa10e&is=695e4f8e&hm=e359a078ab471a058aa6a54b3cb74d3d0d5cbfc6f6cc8c71c937b96d80bb83d6&=&format=webp&quality=lossless&width=1227&height=690)
+
 ![license](https://img.shields.io/badge/license-MIT-blue.svg)
 ![python](https://img.shields.io/badge/python-3.8%2B-yellow.svg)
 
