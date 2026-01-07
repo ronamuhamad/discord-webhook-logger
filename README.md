@@ -17,7 +17,7 @@ simple, lightweight, and async logger for discord webhooks. supports automatic s
 clone the repo:
 
 ```bash
-git clone [https://github.com/ronadimoi/discord-webhook-logger.git](https://github.com/ronadimoi/discord-webhook-logger.git)
+git clone https://github.com/ronadimoi/discord-webhook-logger.git
 cd discord-webhook-logger
 pip install -r requirements.txt
 ```
